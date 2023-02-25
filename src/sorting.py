@@ -12,22 +12,7 @@ def Partition(m,i,j):
     m[p+1] = m[j]
     m[j] = temp
     return p+1
-#    while (p>=q) :
-#        while(m[p][0] < pivot) :
-#            p +=1
-#        
-#        while(m[q][0] > pivot):
-#            q -= 1
-#        
-#        if (p<q):
-#            #swap m[p] dan m[q]
-#            temp = m[p]
-#            m[p] = m[q]
-#            m[q] = temp
-#
-#    return q
-#        
-#        
+     
 def quickSort(m,i,j):
     if(i<j):
         k = Partition(m,i,j)

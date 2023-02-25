@@ -29,7 +29,7 @@ def FindClosestPair(arrayOfPoint, pointCount,dimension,euc_count):
 
     else:
         k = pointCount//2
-        arrayOfPoint1,arrayOfPoint2 = splitList(arrayOfPoint,dimension,pointCount)
+        arrayOfPoint1,arrayOfPoint2 = splitList(arrayOfPoint,pointCount)
         d1,pair1,euc_count = FindClosestPair(arrayOfPoint1,k,dimension,euc_count)
         d2,pair2,euc_count = FindClosestPair(arrayOfPoint2,pointCount-k,dimension,euc_count)
         if(d1<d2):
@@ -79,7 +79,7 @@ def euclidean_distance(point1,point2,dimension):
         sum += point1[i]**2 + point2[i]**2
     return sum**(0.5)
 
-def splitList(array,a,b):
+def splitList(array,b):
     k = b//2
     array1 = []
     array2 = []
@@ -96,3 +96,4 @@ def printPoint(point):
         print(",",end="")
     print(point[len(point)-1],end="")
     print(")")
+    return
