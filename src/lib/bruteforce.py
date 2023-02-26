@@ -1,4 +1,4 @@
-from findClosestPair import euclidean_distance
+from lib.findClosestPair import euclidean_distance
 
 def bruteforce(arrayOfPoint, pointCount,dimension):
     count =0

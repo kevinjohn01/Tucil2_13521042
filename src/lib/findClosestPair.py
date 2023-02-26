@@ -1,4 +1,4 @@
-from sorting import *
+from lib.sorting import *
             
 def FindClosestPair(arrayOfPoint, pointCount,dimension,euc_count):
     pair = []

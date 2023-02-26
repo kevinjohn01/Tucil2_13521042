@@ -1,15 +1,18 @@
 import random
 import time
-from sorting import *
-from findClosestPair import *
-from bruteforce import *
-from visualization import *
+from lib.sorting import *
+from lib.findClosestPair import *
+from lib.bruteforce import *
+from lib.visualization import *
 
 #Program untuk Mencari 2 Titik dengan Jarak Terpendek dari Daftar Titik yang Dibangkitkan secara Acak
 
 #Input dimensi dan generate titik random
 R = int(input("Masukkan Dimensi: "))
 N = int(input("Masukkan Banyak Titik: "))
+while(N<2):
+    print("Masukan tidak valid, silahkan coba lagi")
+    N = int(input("Masukkan Banyak Titik: "))
 PointList = [[(random.uniform(-1000000,1000000)) for j in range(R)] for i in range (N)]
 
 #Sorting elemen titik berdasarkan absis
