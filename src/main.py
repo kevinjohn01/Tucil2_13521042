@@ -67,11 +67,11 @@ if (n=='y'):
     print("Dijalankan di prosesor Intel64 Family 6 Model 78 Stepping 3 GenuineIntel")
     print("======================================================================================")
 
-if (R == 3):
+if (R == 3 or R==2 or R==1):
     print("Tampilkan visualisasi data? (y/n)")
     n=input()
     if (n=='y'):
-        show(PointList,pair)
+        show(PointList,pair,R)
         
 print("Terima kasih sudah menggunakan program ini!")
 
