@@ -8,11 +8,21 @@ from lib.visualization import *
 #Program untuk Mencari 2 Titik dengan Jarak Terpendek dari Daftar Titik yang Dibangkitkan secara Acak
 
 #Input dimensi dan generate titik random
-R = int(input("Masukkan Dimensi: "))
-N = int(input("Masukkan Banyak Titik: "))
-while(N<2):
+R = input("Masukkan Dimensi (>=1): ")
+R = float(R)
+while (R//1 != R or R<1):
+    print("Masukan tidak valid, silakan coba lagi!")
+    R = input("Masukkan Dimensi (>=1): ")
+    R = float(R)
+R = int(R)
+
+N = input("Masukkan Banyak Titik (>=2): ")
+N = float(N)
+while(N//1 != N or N<2):
     print("Masukan tidak valid, silahkan coba lagi")
-    N = int(input("Masukkan Banyak Titik: "))
+    N = input("Masukkan Banyak Titik (>=2): ")
+    N = float(N)
+N = int(N)
 PointList = [[(random.uniform(-1000000,1000000)) for j in range(R)] for i in range (N)]
 
 #Sorting elemen titik berdasarkan absis
@@ -34,7 +44,7 @@ printPoint(pair[1])                                                 #Menampilkan
 print("Dengan jarak",d)                                             #Menampilkan jarak kedua titik
 print()
 print("Terdapat",euc_count, "kali perhitungan euclidean distance")  #Menampilkan berapa kali pemanggilan euclidean distance
-print("Waktu eksekusi:", stop-start, "detik")                       #Menampilkan waktu eksekusi
+print("Waktu eksekusi:", (stop-start)*1000, "ms")                       #Menampilkan waktu eksekusi
 
 print("Dijalankan di prosesor Intel64 Family 6 Model 78 Stepping 3 GenuineIntel")
 print("======================================================================================")
@@ -53,7 +63,7 @@ if (n=='y'):
     printPoint(pair2[1])                                            #Menampilkan titik kedua
     print("Dengan jarak",d2)                                        #Menampilkan jarak
     print()
-    print("Waktu eksekusi: ", stop-start, "detik")                  #Menampilkan waktu
+    print("Waktu eksekusi: ", (stop-start)*1000, "ms")                  #Menampilkan waktu
     print("Dijalankan di prosesor Intel64 Family 6 Model 78 Stepping 3 GenuineIntel")
     print("======================================================================================")
 
